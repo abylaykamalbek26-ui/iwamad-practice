@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans p-8">
+
+    <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-blue-600">My Profile</h1>
+    </header>
+
+    <nav class="flex justify-center mb-8">
+        <ul class="flex space-x-4 bg-white p-4 rounded-lg shadow-md">
+            <li><a href="#about" class="text-blue-500 hover:text-blue-700">About Me</a></li>
+            <li><a href="#skills" class="text-blue-500 hover:text-blue-700">My Skills</a></li>
+            <li><a href="#goals" class="text-blue-500 hover:text-blue-700">Goals</a></li>
+            <li><a href="#contact" class="text-blue-500 hover:text-blue-700">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="max-w-3xl mx-auto">
+        <div class="bg-white p-6 border border-gray-300 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-6">
+            <img src="image.png" alt="My avatar" class="w-32 h-32 rounded-full object-cover border-4 border-blue-200">
+            <div>
+                <h2 class="text-2xl font-semibold mb-2">Kamalbek Abylay</h2>
+                <p class="text-gray-700 mb-4">KBTU's 3rd Year Student. Aspiring web developer hoping to level up my skills to build modern, user-friendly interfaces for future IT projects.</p>
+                
+                <button id="likeBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                    Like
+                </button>
+            </div>
+        </div>
+
+        <section id="about" class="mt-8 bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">About Me</h2>
+            <p class="text-gray-700">Hi! I am an aspiring web developer. From this course, I hope to level up my web development skills and learn how to build modern, user-friendly interfaces for my future IT projects.</p>
+        </section>
+
+        <section id="skills" class="mt-8 bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">My Skills</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>C++</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <section id="goals" class="mt-8 bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">Goals</h2>
+            <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 p-2 text-left">Focus Area</th>
+                        <th class="border border-gray-300 p-2 text-left">Semester Goal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2">Web Development</td>
+                        <td class="border border-gray-300 p-2">Build a complete and responsive personal portfolio</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">Game Design</td>
+                        <td class="border border-gray-300 p-2">Master Unreal Game design program</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="mt-8 bg-white p-6 rounded-lg shadow mb-8">
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">Contact Me</h2>
+            <p class="mb-4">Feel free to reach out via email: <a href="mailto:ab_kamalbek@kbtu.kz" class="text-blue-500 underline">ab_kamalbek@kbtu.kz</a></p>
+            
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block font-medium">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded">
+                </div>
+                <div>
+                    <label for="email" class="block font-medium">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded">
+                </div>
+                <div>
+                    <label for="message" class="block font-medium">Message:</label>
+                    <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 p-2 rounded"></textarea>
+                </div>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="text-center text-gray-500 text-sm mt-8">
+        © 2026 Kamalbek Abylay. All rights reserved.
+    </footer>
+
+    <script>
+        const likeBtn = document.getElementById('likeBtn');
+        
+        likeBtn.addEventListener('click', () => {
+            // Toggle the text
+            if (likeBtn.textContent === 'Like') {
+                likeBtn.textContent = 'Liked!';
+                likeBtn.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+                likeBtn.classList.add('bg-red-500', 'hover:bg-red-600');
+            } else {
+                likeBtn.textContent = 'Like';
+                likeBtn.classList.remove('bg-red-500', 'hover:bg-red-600');
+                likeBtn.classList.add('bg-blue-500', 'hover:bg-blue-600');
+            }
+        });
+    </script>
+</body>
+</html>

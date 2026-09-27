@@ -21,7 +21,7 @@ function App() {
           bio="Hi! I am an aspiring web developer. From this course, I hope to level up my web development skills."
           avatarUrl="image.png" 
         />
-        
+
         <section className="mt-8 bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-bold mb-4">My Skills</h3>
           {skillsData.length === 0 ? (
@@ -41,3 +41,5 @@ function App() {
 }
 
 export default App;
+
+    /*1*/
